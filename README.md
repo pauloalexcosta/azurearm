@@ -36,7 +36,7 @@ Use this group of templates to deploy OutSystems in an existing database server.
 
 This template deploys a single OutSystems environment on a virtual machine.
 
-[![SingleEnv](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FOutSystems%2FAzureARMTemplates%2Fmaster%2FController.json)
+[![SingleEnv](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpauloalexcosta%2Fazurearm%2Fmaster%2FController.json)
 
 **Notes:**
 
