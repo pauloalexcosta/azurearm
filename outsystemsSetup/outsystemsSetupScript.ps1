@@ -57,11 +57,11 @@ Import-Module -Name Outsystems.SetupTools -ArgumentList $true, 'AzureRM' | Out-N
 $majorVersion = "$(([System.Version]$OSServerVersion).Major).$(([System.Version]$OSServerVersion).Minor)"
 
 # -- Change CDROM letter to F:
-Get-CimInstance -Class Win32_volume -Filter 'DriveType=5' | Select-Object -First 1 | Set-CimInstance -Arguments @{DriveLetter = 'F:'} | Out-Null
-$null = Get-PSDrive
+#Get-CimInstance -Class Win32_volume -Filter 'DriveType=5' | Select-Object -First 1 | Set-CimInstance -Arguments @{DriveLetter = 'F:'} | Out-Null
+#$null = Get-PSDrive
 
 # Initialize and format the data disk
-Get-Disk 2 | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -UseMaximumSize -MbrType IFS -driveletter F | Format-Volume -FileSystem NTFS -Confirm:$false | Out-Null
+Get-Disk 2 | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -UseMaximumSize -MbrType IFS -driveletter E | Format-Volume -FileSystem NTFS -Confirm:$false | Out-Null
 Get-Partition -DiskNumber 2 -PartitionNumber 1 | Format-Volume -FileSystem NTFS -Confirm:$false | Out-Null
 $null = Get-PSDrive
 
